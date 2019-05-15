@@ -1,12 +1,12 @@
 const indicatorName = 'CO2 emissions (kt)';
-const urbanPopulationPropIndex = '2';
+const indicatorPropIndex = '2';
 const startYearPropIndex = 4;
 const endYearPropIndex = 61;
 
 
 module.exports = function (data, columns) {
     let yearMap = {};
-    let countriesWithEmissionsIndicator = data.filter(r=> r[urbanPopulationPropIndex] == indicatorName);
+    let countriesWithEmissionsIndicator = data.filter(r=> r[indicatorPropIndex] == indicatorName);
 
     for (let i = 0; i < data.length; i++) {
         const row = data[i];

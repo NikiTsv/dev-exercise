@@ -1,6 +1,6 @@
 
  const indicatorName = 'Urban population growth (annual %)';
- const urbanPopulationPropIndex = '2';
+ const indicatorPropIndex = '2';
  const startingYearPropIndex = 24;
  const endYearPropIndex = 34;
 
@@ -40,7 +40,7 @@ function getAveragePopulationGrowthForCountry(row){
 }
 
 module.exports = function (data) {
-    let rowsWithUrbanPopulationGrowthIndicator = data.filter(r=> r[urbanPopulationPropIndex] == indicatorName && shouldIncludeCountry(r));
+    let rowsWithUrbanPopulationGrowthIndicator = data.filter(r=> r[indicatorPropIndex] == indicatorName && shouldIncludeCountry(r));
 
     const countryWithHighestAverageGrowthBetween1980and1990 = getHighestAverageAnnualPopulationGrowth(rowsWithUrbanPopulationGrowthIndicator);
 
