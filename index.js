@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const readCSV = require('./readCSV');
-const calculateAverageUrbanAnualPopulationGrowth = require('./calculateGrowth');
+const calculateAverageUrbanAnnualPopulationGrowth = require('./calculateGrowth');
 const calculateEmissions = require('./calculateEmissions');
 
 let data = readCSV('data.csv');
@@ -10,7 +10,7 @@ let data = readCSV('data.csv');
 data = data.splice(4);
 
 const columnNames = data[0];
-const countryWithHighestAverageGrowthBetween1980and1990 = calculateAverageUrbanAnualPopulationGrowth(data);
+const countryWithHighestAverageGrowthBetween1980and1990 = calculateAverageUrbanAnnualPopulationGrowth(data);
 
 console.log('Country with highest average growth between 1980 and 1990:', countryWithHighestAverageGrowthBetween1980and1990.name, countryWithHighestAverageGrowthBetween1980and1990.value);
 
