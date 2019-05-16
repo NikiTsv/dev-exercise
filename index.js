@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const readCSV = require('./readCSV');
-const calculateAverageUrbanAnnualPopulationGrowth = require('./calculateGrowth');
+const calculateAverageUrbanAnnualPopulationGrowth = require('./calculateGrowth').calculateAverageUrbanAnnualPopulationGrowth;
 const calculateEmissions = require('./calculateEmissions');
 
 let data = readCSV('data.csv');

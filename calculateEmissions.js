@@ -3,8 +3,7 @@ const indicatorProp = '2';
 const startYearProp = 4;
 const endYearProp = 61;
 
-
-module.exports = function (data, columns) {
+const calculateEmissions =  (data, columns) => {
     let yearMap = {};
     let countriesWithEmissionsIndicator = data.filter(r=> r[indicatorProp] == indicatorName);
 
@@ -41,3 +40,5 @@ module.exports = function (data, columns) {
 
     return maxYear;
 }
+
+module.exports = calculateEmissions;
