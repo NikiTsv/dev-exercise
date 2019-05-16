@@ -20,4 +20,6 @@ There is no right or wrong way to achieve this. Please provide instructions on h
 
 ## Instructions to run the app
 Use node v10.
+run 'npm install'
 run 'node index' in command prompt
+run 'npm test' to run tests
